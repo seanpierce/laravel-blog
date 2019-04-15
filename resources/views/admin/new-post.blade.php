@@ -9,6 +9,9 @@
                 <div class="card-body">
                     <create-post />
                 </div>
+                <div class="card-body">
+                    <a class="btn btn-secondary" href="/admin" role="button">Back</a>
+                </div>
             </div>
         </div>
     </div>
