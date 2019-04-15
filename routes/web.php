@@ -25,6 +25,8 @@ Route::get('/admin', 'AdminController@index')
     ->middleware('is_admin')
     ->name('admin');
 
-    Route::get('/admin/post', 'AdminController@new_post')
-    ->middleware('is_admin')
-    ->name('admin_post');
+Route::get('/admin/posts', 'AdminController@posts')
+    ->middleware('is_admin');
+
+Route::get('/admin/new-post', 'AdminController@new_post')
+    ->middleware('is_admin');
