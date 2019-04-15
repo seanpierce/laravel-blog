@@ -3,3 +3,11 @@ button,
 label {
     display: block;
 }
+
+.post {
+    margin-bottom: 1em;
+    .created-at {
+        margin-top: 1em;
+        font-size: 0.9em;
+    }
+}
