@@ -11,3 +11,4 @@ npm-debug.log
 yarn-error.log
 /storage/files/uploads/*
 !/storage/files/uploads/.keep
+/public/css/app.css
