@@ -10,11 +10,11 @@
         </div>
         <div class="form-group">
             <label>Image</label>
-            <input 
-                type="file" 
+            <input
+                type="file"
                 @change="handleFile($event)">
         </div>
-        <button 
+        <button
             class="btn btn-primary"
             @click="submitFiles">
             Submit
@@ -49,7 +49,7 @@ import axios from 'axios'
                 payload.append('title', this.title);
                 payload.append('content', this.content);
 
-                axios.post('/api/post', 
+                axios.post('/api/post',
                     payload,
                     {
                         headers: {
