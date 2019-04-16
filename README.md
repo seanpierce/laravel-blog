@@ -6,6 +6,7 @@ A simple laravel blog implementing user authentication for admins with a custom,
 
 * PHP
 * Composer
+* NodeJS
 
 ## Usage
 
