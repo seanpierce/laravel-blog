@@ -18,7 +18,10 @@ Auth::routes();
 // Basic pages
 Route::get('/home', 'HomeController@index')
     ->name('home');
-    
+
+Route::get('/blog', 'BlogController@index')
+    ->name('blog');
+
 
 // Admin portal
 Route::get('/admin', 'AdminController@index')
