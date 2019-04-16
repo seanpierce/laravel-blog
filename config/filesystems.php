@@ -50,7 +50,7 @@ return [
 
         'uploads' => [
             'driver' => 'local',
-            'root' => storage_path().'/files/uploads',
+            'root' => storage_path('app/public/uploads'),
         ],
 
         'public' => [
