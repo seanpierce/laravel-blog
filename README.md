@@ -1,6 +1,6 @@
 # Laravel Blog
 
-A simple laravel blog implementing user authentication for admins. Data is managed with a sqlite3 database. Front-end interactive features developed using VueJS.
+A simple laravel blog implementing user authentication for admins with a custom, headless CMS. Data is managed with a sqlite3 database. Front-end and interactive features developed using VueJS.
 
 ## Dependencies
 
