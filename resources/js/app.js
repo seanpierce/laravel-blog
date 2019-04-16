@@ -30,5 +30,48 @@ Vue.component('create-post', require('./components/Admin/CreatePost.vue').defaul
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: function() {
+        return {
+            success: {
+                message: null,
+                popped: false
+            },
+            error: {
+                message: null,
+                popped: false
+            },
+            timeOOut: null
+        }
+    },
+    methods: {
+        popSuccess(message, callback) {
+            clearTimeout(this.timeOut);
+            this.success.popped = true;
+            this.success.message = message;
+
+            this.timeOut = setTimeout(() => {
+                this.clearSuccess();
+                callback && callback();
+            }, 3000);
+        },
+        popError(message) {
+            clearTimeout(this.timeOut);
+            this.error.popped = true;
+            this.error.message = message;
+
+            this.timeOut = setTimeout(() => {
+                this.clearError();
+            }, 3000);
+        },
+        clearSuccess() {
+            this.success.popped = false;
+            this.success.message = null;
+        }
+        ,
+        clearError() {
+            this.error.popped = false;
+            this.error.message = null;
+        }
+    }
 });
