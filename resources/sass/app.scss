@@ -11,10 +11,13 @@
 @import 'forms';
 
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .blog-post {
-    margin-bottom: 2em;
+	margin-bottom: 2em;
+	img.post-image {
+		margin-bottom: 1em;
+	}
 }
