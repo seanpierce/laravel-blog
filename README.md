@@ -28,7 +28,7 @@ Create the environment file
 mv .env.example .env
 ```
 
-Update the .env file to connect to eh sqlite3 database
+Update the .env file to connect to the sqlite3 database
 
 ```env
 DB_CONNECTION=sqlite
