@@ -16,7 +16,7 @@
         </div>
         <button
             class="btn btn-primary"
-            @click="submitFiles">
+            @click="createPost">
             Submit
         </button>
     </div>
@@ -43,7 +43,7 @@ import axios from 'axios'
             },
             removeFile(key) {
             },
-            submitFiles() {
+            createPost() {
                 let payload = new FormData();
                 payload.append('file', this.file);
                 payload.append('title', this.title);
@@ -58,10 +58,22 @@ import axios from 'axios'
                     })
                     .then(res => {
                         console.log(res)
+                        if (res.data === true)
+                            this.createPostSuccess();
                     })
                     .catch(err => {
                         console.log(err);
+                        this.createPostErr(err);
                     })
+            },
+            createPostSuccess() {
+                this.$root.popSuccess("New post created", this.redirectToPosts);
+            },
+            createPostError(err) {
+                this.$root.popError("An error ocurred while creating a new post: " + err);
+            },
+            redirectToPosts() {
+                window.location.href = "/admin/posts";
             }
         }
     }
